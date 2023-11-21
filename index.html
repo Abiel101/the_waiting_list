@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Waiting List</title>
+
+  <style>
+    /* Change background when you change pages */
+    .footer_nav a{
+      background-color: #222222;
+    }
+    /* Change to remove filter after being clicked */
+    .nav_icon-btns{ 
+      filter: none;
+    }
+  </style>
+
+
+</head>
+<body class="viewList_body" data-barba="wrapper">
+  <!-- Currently Waiting -->
+  <header class="viewList_header">
+    <div class="viewList_header-left">
+      <img src="assets/PeopleIcon.png" alt="peopleIcon">
+      <p>Currently Waiting</p>
+    </div>
+    <div class="viewList_header-right">
+      <span>10</span>
+    </div>
+  </header>
+
+  <!-- View realtime database -->
+  <main class="viewList_main" data-barba="container" data-barba-namespace="waitList">
+    <!-- Up Next -->
+    <section>
+      <h2>Up Next</h2>
+      <div id="upNext" class="db_container"></div>
+    </section>
+
+    <!-- Waiting -->
+    <section>
+      <h2>Waiting</h2>
+      <div id="waitingList" class="db_container"></div>
+    </section>
+  </main>
+
+  <!-- Footer Navigation -->
+  <footer class="footer_nav">
+    <a id="home_button" href="index.html">
+      <img class="nav_icon-btns" src="assets/home_white-icon.png" alt="home icon white">
+    </a>
+    <a id="add_button" href="add.html">
+      <img class="nav_icon-btns" src="assets/plus_white-icon.png" alt="plus white icon">
+    </a>
+  </footer>
+
+  <!-- Javascript Script Links -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- <script src="./modules/barba.js" type="module"></script> -->
+  <script src="modules/index.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

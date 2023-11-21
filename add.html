@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UpNext Submit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-barba="wrapper" class="submit_body">
+  <header class="submit_logo">
+    <!-- Logo WL -->
+    <img src="assets/whiteUpNextLogo.png" alt="UpNextLogo">
+  </header>
+
+  <!-- Main form body -->
+  <main data-barba="container" data-barba-namespace="home">
+    <form class="submit_form" action="submitToFireBase()">
+      <label for="enter_name">Enter Name</label>
+      <input id="enter_name" type="text" placeholder="name" autocomplete="additional-name">
+      <label for="phone_number">Phone Number</label>
+      <input type="number" id="phone_number" placeholder="phone number">
+      <div>
+        <p id="gentelmen_Button" class="inactive_button">Gentelmen</p>
+        <p id="madam_Button" class="inactive_button">Madam</p>
+      </div>
+      <input type="submit" name="submit" id="submit" value="ADD">
+    </form>
+  </main>
+
+  <footer class="footer_nav">
+    <a id="home_button" href="index.html">
+      <img class="nav_icon-btns" src="assets/home_white-icon.png" alt="home icon white">
+    </a>
+    <a id="add_button" href="add.html">
+      <img class="nav_icon-btns" src="assets/plus_white-icon.png" alt="plus white icon">
+    </a>
+  </footer>
+
+<!-- Javascript Script Links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<!-- <script src="modules/barba.js" type="module"></script> -->
+<script src="main.js"></script>
+<script src="modules/add.js" type="module"></script>
+</body>
+</html>
