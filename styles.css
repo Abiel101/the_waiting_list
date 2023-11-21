@@ -17,6 +17,15 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+main{
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.main_add{
+  max-width: 400px;
+}
 /* ********************************************************************* */
 
 /* Add/Home View for adding to database */
@@ -33,7 +42,7 @@ input[type=number] {
   /* border: solid 1px red; */
 }
 .submit_logo img{
-  width: 60%;
+  width: 100px;
 }
 .submit_form{
   /* border: solid 1px red; */
@@ -56,8 +65,8 @@ input[type=number] {
   margin-top: 0;
 }
 .submit_form input[type=text], input[type=number]{
-  padding: 1.5rem;
-  font-size: 1rem;
+  padding: 1.2rem;
+  font-size: 0.8rem;
   border-radius: 15px;
   text-align: center;
   font-weight: 700;
@@ -141,25 +150,25 @@ input[type=number] {
   position: sticky;
   top: 0;
   z-index: 10;
-  height: 270px;
+  height: 220px;
   width: 100%;
   background-color: #222222;
   color: #fcfcfc;
-  border-radius: 0px 0px 25px 25px;
+  border-radius: 0px 0px 50% 50%;
   padding: 33px 33px 33px 33px;
   text-align: center;
 }
 
 .viewList_header-left{
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 .viewList_header-left img{
-  width: 100px;
+  width: 80px;
   margin-bottom: 10px;
 }
 .viewList_header-right{
-  font-size: 6.5rem;
+  font-size:4rem;
   font-weight: 700;
 }
 .viewList_main{
@@ -215,6 +224,7 @@ section h2{
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
+  font-size: 1rem;
 }
 .buttonSpanContainer{
   display: flex;
@@ -230,7 +240,7 @@ section h2{
 }
 .active{
   opacity: 1;
-  top: -7px;
+  top: -9px;
 }
 .upNext{
   width: 100%;
