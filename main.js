@@ -19,26 +19,31 @@ const waitListContainer = document.getElementById('waitingList');
 onValue(waitingListInDB, function(snapshot){
 
   if(snapshot.exists()){
-      //Grabs the entries and returns them as an array [0]Key/ID, [1]Value
-      let waitingListPeople = Object.entries(snapshot.val());
-      
-      clearWaitingList();
-  
-      for(let i = 0; i < waitingListPeople.length; i++){
-          let currentPerson = waitingListPeople[i]; 
-          let currentPersonID = currentPerson[0];
-          let currentPersonInfo = currentPerson[1]; //Here is the gender, name, number & status
+    //Grabs the entries and returns them as an array [0]Key/ID, [1]Value
+    let waitingListPeople = Object.entries(snapshot.val());
+    
+    clearWaitingList();
 
-          console.log(currentPerson);
-          appendNewWaiter(currentPerson);
-          
-      }
+    for(let i = 0; i < waitingListPeople.length; i++){
+        let currentPerson = waitingListPeople[i]; 
+        let currentPersonID = currentPerson[0];
+        let currentPersonInfo = currentPerson[1]; //Here is the gender, name, number & status
+
+        console.log(currentPerson);
+        appendNewWaiter(currentPerson);
+        currentlyWaitingCount(waitingListPeople.length)
+    }
   }else{
-      waitListContainer.innerHTML = "No items here... yet"   ;
+    waitListContainer.innerHTML = "No items here... yet"   ;
   }
   animation();
 }) 
 
+//Currently Waiting Count
+const waitListCount = document.getElementById('waitListCount');
+function currentlyWaitingCount(count){
+  waitListCount.innerText = count;
+}
 
 // Clears the shopping list to fully refresh list
 function clearWaitingList(){
@@ -52,7 +57,7 @@ function appendNewWaiter(person){
   let personInfo = person[1];
 
   waitListContainer.innerHTML += `
-    <div class="${classes}">
+    <div id="${personID}" class="${classes}">
       <span class="waitingContainer_context">
         <h3>${personInfo.name}</h3>
         <h4>${personInfo.phone}</h4>
@@ -62,18 +67,16 @@ function appendNewWaiter(person){
       </span>
     </div>
     `
-
     // !! Trying to figure this part out.
     const notifyBtn = document.getElementById('notificationBtn');
-    
     notifyBtn.addEventListener('click', function(){
-      removeItemFromDB();
+      removeItemFromDB(personID);
     })
+  }
 
-    function removeItemFromDB(){
-      // let exactLocationOfItemInDB = ref(database, `waitingList/${personID}`);
-      // remove(exactLocationOfItemInDB);
-      console.log(personID);
-    }
-}
+  function removeItemFromDB(id){
+    // let exactLocationOfItemInDB = ref(database, `waitingList/${id}`);
+    // remove(exactLocationOfItemInDB);
+    console.log(id);
+  }
 
