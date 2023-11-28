@@ -1,0 +1,48 @@
+.intro{
+  background-color: #fcfcfc;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222222;
+  overflow: hidden;
+  animation: go-black 1s forwards 2s, slide-out 1s forwards 3s;
+}
+.intro div{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.intro_img{
+  position: relative;
+  width: 100px;
+  top: 30px;
+  animation: fade-in 1s forwards;
+  opacity: 0;
+}
+.intro_text{
+  position: relative;
+  top: 50px;
+  animation: fade-in 1s forwards 0.2s;
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  to{
+    opacity: 1;
+    top: 0px;
+  }
+}
+@keyframes go-black{
+  to{
+    background-color: #222222;
+  }
+}
+@keyframes slide-out{
+  to{
+    height: 0px;
+  }
+}

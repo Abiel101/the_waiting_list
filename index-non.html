@@ -21,13 +21,6 @@
 
 </head>
 <body class="viewList_body" data-barba="wrapper">
-  <!-- intro animation -->
-  <!-- <div id="intro" class="intro">
-    <div>
-      <img class="intro_img" src="assets/UpNextLogo.png" alt="UpNextLogo">
-      <p class="intro_text">Up Next</p>
-    </div>
-  </div> -->
   <!-- Currently Waiting -->
   <header class="viewList_header">
     <div class="viewList_header-left">
@@ -41,16 +34,22 @@
 
   <!-- View realtime database -->
   <main class="viewList_main" data-barba="container" data-barba-namespace="waitList">
-    <!-- Waiting -->
+    <!-- Up Next -->
     <section>
       <h2>Up Next</h2>
+      <div id="upNext" class="db_container"></div>
+    </section>
+
+    <!-- Waiting -->
+    <section>
+      <h2>Waiting</h2>
       <div id="waitingList" class="db_container"></div>
     </section>
   </main>
 
   <!-- Footer Navigation -->
   <footer class="footer_nav">
-    <a id="home_button" href="index.html">
+    <a id="home_button" href="index-non.html">
       <img class="nav_icon-btns" src="assets/home_white-icon.png" alt="home icon white">
     </a>
     <a id="add_button" href="add.html">
@@ -64,11 +63,9 @@
   <script src="https://unpkg.com/@barba/core"></script>
   <!-- jsdelivr -->
   <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
-  <!-- <script type="module" src="modules/barba.js"></script> -->
-  <script type="module" src="main.js"></script>
-  <script type="module" src="animation.js"></script>
+  <script type="module" src="modules/barba.js"></script>
   <script src="modules/index.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>

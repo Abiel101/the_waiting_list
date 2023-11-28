@@ -246,7 +246,6 @@ section h2{
 .upNext{
   width: 100%;
   opacity: 1;
-  margin-bottom: 0px;
 }
 .upNext h3{
   font-size: 16px;
@@ -258,4 +257,8 @@ section h2{
 .upNext button{
   padding: 16px;
   cursor: pointer;
+}
+
+.displayNone{
+  display: none;
 }

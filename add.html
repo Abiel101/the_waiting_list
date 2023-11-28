@@ -14,17 +14,17 @@
 
   <!-- Main form body -->
   <main class="main_add" data-barba="container" data-barba-namespace="home">
-    <form class="submit_form" action="submitToFireBase()">
+    <div class="submit_form">
       <label for="enter_name">Enter Name</label>
-      <input id="enter_name" type="text" placeholder="name" autocomplete="additional-name">
+      <input id="enter_name" type="text" placeholder="name" autocomplete="off">
       <label for="phone_number">Phone Number</label>
-      <input type="number" id="phone_number" placeholder="phone number">
+      <input id="phone_number" type="number" placeholder="phone number" autocomplete="off">
       <div>
         <p id="gentelmen_Button" class="inactive_button">Gentelmen</p>
         <p id="madam_Button" class="inactive_button">Madam</p>
       </div>
-      <input type="submit" name="submit" id="submit" value="ADD">
-    </form>
+      <input type="submit" id="add_button" value="ADD">
+    </div>
   </main>
 
   <footer class="footer_nav">
@@ -38,8 +38,12 @@
 
 <!-- Javascript Script Links -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<!-- <script src="modules/barba.js" type="module"></script> -->
-<script src="main.js"></script>
-<script src="modules/add.js" type="module"></script>
+<!-- unpkg -->
+<script src="https://unpkg.com/@barba/core"></script>
+<!-- jsdelivr -->
+<script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+
+<script src="modules/firebase.js" type="module"></script>
+<!-- <script type="module" src="modules/barba.js"></script> -->
 </body>
 </html>
