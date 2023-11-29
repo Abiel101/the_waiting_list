@@ -1,6 +1,19 @@
+
+
+
+
+
+// RENAME TO ADDFIREBASE.JS
+
+
+
+
+
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getDatabase, push, ref} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import { errorMessage, successMessage } from "../animation.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -68,8 +81,10 @@ addButtonEl.addEventListener('click', function(){
   if (nameInputValue != '' && phoneInputValue != '' && gender != ''){
     push(waitingListInDB, formInputs);
     clearInputFieldEl();
+    successMessage();
   }else{
-    alert('Please Input all fields');
+    // alert('Please Input all fields');
+    errorMessage();
     console.log(formInputs);
   }
 })

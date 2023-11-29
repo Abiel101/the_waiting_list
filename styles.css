@@ -27,6 +27,35 @@ main{
 .main_add{
   max-width: 400px;
 }
+.updater{
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 70%;
+  max-width: 400px;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  border: 3px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.greenNotification{
+  color: #2d6551;
+  border-color: #2d6551;
+  background-color: #76eec4;
+}
+.redNotification{
+  color: #652d2d;
+  border-color: #652d2d;
+  background-color: #ee7676;
+}
+
+
 /* ********************************************************************* */
 
 /* Add/Home View for adding to database */

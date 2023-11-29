@@ -1,7 +1,17 @@
+
+
+
+
+// RENAME TO INDEXFIREBASE.JS
+
+
+
+
+
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getDatabase, ref, onValue, remove} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
-import { animation } from './animation.js'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -36,7 +46,6 @@ onValue(waitingListInDB, function(snapshot){
   }else{
     waitListContainer.innerHTML = "No items here... yet"   ;
   }
-  animation();
 }) 
 
 //Currently Waiting Count

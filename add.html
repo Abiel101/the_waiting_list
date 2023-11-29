@@ -5,8 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UpNext Submit</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body data-barba="wrapper" class="submit_body">
+  <div id="notificationUpdater" class="updater">
+    <p id="updaterText"></p> 
+    <i id="checkMarkNotify" class="fa-solid fa-square-check"></i>
+    <i id="xMarkNotify" class="fa-solid fa-square-xmark"></i>
+  </div>
+
   <header class="submit_logo">
     <!-- Logo WL -->
     <img src="assets/whiteUpNextLogo.png" alt="UpNextLogo">
@@ -42,6 +49,9 @@
 <script src="https://unpkg.com/@barba/core"></script>
 <!-- jsdelivr -->
 <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+
+
+<script src="animation.js" type="module"></script>
 
 <script src="modules/firebase.js" type="module"></script>
 <!-- <script type="module" src="modules/barba.js"></script> -->
