@@ -1,14 +1,5 @@
 
 
-
-
-// RENAME TO INDEXFIREBASE.JS
-
-
-
-
-
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getDatabase, ref, onValue, remove} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
@@ -64,6 +55,8 @@ function appendNewWaiter(person){
   let notificationBtnText = 'Notify';
   let personID = person[0];
   let personInfo = person[1];
+
+// Might need to select the waitlistcontainter to work with this for removing
 
   waitListContainer.innerHTML += `
     <div id="${personID}" class="${classes}">

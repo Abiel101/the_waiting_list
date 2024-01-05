@@ -1,19 +1,9 @@
 
 
-
-
-
-// RENAME TO ADDFIREBASE.JS
-
-
-
-
-
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getDatabase, push, ref} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
-import { errorMessage, successMessage } from "../animation.js";
+import { errorMessage, successMessage } from "../../animation.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
